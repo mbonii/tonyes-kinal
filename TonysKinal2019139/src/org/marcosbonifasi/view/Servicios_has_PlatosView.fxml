@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="453.0" prefWidth="864.0" styleClass="anchorPane" stylesheets="@../resource/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marcosbonifasi.controller.Servicio_has_PlatoController">
+   <children>
+      <Label layoutX="232.0" layoutY="29.0" styleClass="titleWindow" text="Servicios has Platos" textFill="#15084d">
+         <effect>
+            <DropShadow color="#f2f2f2" height="61.43" radius="30.215" spread="0.3" width="61.43" />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="25.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="99.0" text="Código Servicio" textFill="#220012">
+         <effect>
+            <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="26.0" layoutY="154.0" text="Código Plato" textFill="#220012">
+         <effect>
+            <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="cmbCodigoServicio" layoutX="220.0" layoutY="96.0" prefHeight="31.0" prefWidth="506.0" promptText="Servicios" styleClass="cmb">
+         <effect>
+            <DropShadow>
+               <input>
+                  <InnerShadow />
+               </input>
+            </DropShadow>
+         </effect>
+      </ComboBox>
+      <TableView fx:id="tblServiciosHasPlatos" layoutX="26.0" layoutY="206.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="700.0" styleClass="tableView">
+        <columns>
+          <TableColumn fx:id="colCodigoServicio" prefWidth="343.0" text="Código Servicio" />
+          <TableColumn fx:id="colCodigoPlato" prefWidth="353.0" text="Código Plato" />
+        </columns>
+      </TableView>
+      <Pane layoutX="777.0" onMouseClicked="#menuPrincipal" prefHeight="453.0" prefWidth="87.0" styleClass="panel">
+         <children>
+            <AnchorPane layoutX="18.0" layoutY="185.0" onMouseClicked="#menuPrincipal">
+               <children>
+                  <Label layoutY="62.0" text="Home">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="55.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../image/home.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow height="19.45" radius="10.39" width="24.11" />
+         </effect>
+      </Pane>
+      <ComboBox fx:id="cmbCodigoPlato" layoutX="220.0" layoutY="151.0" prefHeight="31.0" prefWidth="506.0" promptText="Platos" styleClass="cmb">
+         <effect>
+            <DropShadow>
+               <input>
+                  <InnerShadow />
+               </input>
+            </DropShadow>
+         </effect>
+      </ComboBox>
+   </children>
+</AnchorPane>

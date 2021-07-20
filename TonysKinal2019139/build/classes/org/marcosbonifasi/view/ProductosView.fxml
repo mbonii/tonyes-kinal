@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="567.0" prefWidth="957.0" styleClass="anchorPane" stylesheets="@../resource/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marcosbonifasi.controller.ProductoController">
+   <children>
+      <Label layoutX="342.0" layoutY="23.0" styleClass="titleWindow" text="PRODUCTOS" textFill="#15084d">
+         <effect>
+            <DropShadow color="#f2f2f2" />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoProducto" editable="false" layoutX="262.0" layoutY="89.0" prefHeight="31.0" prefWidth="173.0" styleClass="txtField">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Label layoutX="42.0" layoutY="93.0" text="Código Producto" textFill="#220012">
+         <effect>
+            <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="139.0" text="Nombre Producto" textFill="#220012">
+         <effect>
+            <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="41.0" layoutY="189.0" text="Cantidad" textFill="#220012">
+         <effect>
+            <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNombreProducto" editable="false" layoutX="262.0" layoutY="135.0" prefHeight="31.0" prefWidth="391.0" styleClass="txtField">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtCantidad" editable="false" layoutX="262.0" layoutY="185.0" prefHeight="31.0" prefWidth="173.0" styleClass="txtField">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblProductos" layoutX="42.0" layoutY="246.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="783.0" styleClass="tableView">
+        <columns>
+          <TableColumn fx:id="colCodigoProducto" editable="false" prefWidth="197.0" resizable="false" text="Código Producto" />
+          <TableColumn fx:id="colNombreProducto" editable="false" prefWidth="371.0" resizable="false" text="Nombre Producto" />
+            <TableColumn fx:id="colCantidad" editable="false" prefWidth="214.0" resizable="false" text="Cantidad" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnReporte" layoutX="603.0" layoutY="470.0" mnemonicParsing="false" onAction="#reporte" prefHeight="65.0" prefWidth="150.0" styleClass="btn" text="REPORTE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="444.0" layoutY="470.0" mnemonicParsing="false" onAction="#editar" prefHeight="65.0" prefWidth="150.0" styleClass="btn" text="EDITAR">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="283.0" layoutY="470.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="65.0" prefWidth="150.0" styleClass="btn" text="ELIMINAR">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNuevo" layoutX="121.0" layoutY="470.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="65.0" prefWidth="150.0" styleClass="btn" text="NUEVO">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="16.0" />
+         </font>
+      </Button>
+      <Pane layoutX="869.0" onMouseClicked="#menuPrincipal" prefHeight="567.0" prefWidth="87.0" styleClass="panel">
+         <children>
+            <AnchorPane layoutX="18.0" layoutY="242.0" onMouseClicked="#menuPrincipal">
+               <children>
+                  <Label layoutY="62.0" text="Home">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="55.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../image/home.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow height="19.45" radius="10.39" width="24.11" />
+         </effect>
+      </Pane>
+   </children>
+</AnchorPane>

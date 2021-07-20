@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteServicios" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="36b7101c-585a-46ba-ab38-3a4658da6b50">
+	<property name="ireport.zoom" value="1.4641000000000133"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codServicio" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Asus\\Documents\\NetBeansProjects\\TonysKinal2019139\\src\\org\\marcosbonifasi\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ListarCantidadPlatos($P{codServicio});]]>
+	</queryString>
+	<field name="count(codigoPlato)" class="java.lang.Long"/>
+	<background>
+		<band height="572" splitType="Stretch">
+			<line>
+				<reportElement x="751" y="0" width="1" height="572" uuid="f3eba327-5919-4971-b27d-e1771a3d08e6"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#CC0000"/>
+				</graphicElement>
+			</line>
+			<frame>
+				<reportElement mode="Opaque" x="22" y="0" width="730" height="572" forecolor="#F3F5F3" backcolor="#F3F5F3" uuid="1ac0fe9d-7c1d-40ca-9746-c1fa615143d1"/>
+				<image scaleImage="FillFrame">
+					<reportElement x="147" y="181" width="505" height="325" uuid="bfcb817f-13dc-4e07-8372-ca848a94ca1c"/>
+					<imageExpression><![CDATA["C:\\Users\\Asus\\Documents\\NetBeansProjects\\TonysKinal2019139\\src\\org\\marcosbonifasi\\image\\KinalFire.png"]]></imageExpression>
+				</image>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="20" height="572" forecolor="#CC0000" backcolor="#CC0000" uuid="84b30968-b329-4f88-95b7-c6e9cc7210b4"/>
+			</frame>
+			<line>
+				<reportElement x="20" y="544" width="732" height="1" forecolor="#0066CC" backcolor="#0066CC" uuid="58432562-8193-4bec-b70c-06e376dce9bc"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="20" y="26" width="400" height="14" forecolor="#CC0000" backcolor="#CC0000" uuid="c983bbd7-31d7-41dc-a651-889c5d676c36"/>
+			</frame>
+			<staticText>
+				<reportElement x="530" y="33" width="156" height="33" uuid="3d09926f-6c03-4c2f-9fd0-83a6fb742876"/>
+				<textElement>
+					<font fontName="Gill Sans Ultra Bold" size="20"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="530" y="57" width="120" height="22" uuid="87d80d85-f5c0-4d3b-9de3-77fc7ec0512b"/>
+				<textElement>
+					<font fontName="Freestyle Script" size="15"/>
+				</textElement>
+				<text><![CDATA[Restaurante de Tipo Buffet]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="20" y="0" width="300" height="15" forecolor="#CC0000" backcolor="#CC0000" uuid="2d69dc3b-cbc3-4e27-b53e-791bd613e397"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="20" y="14" width="350" height="14" forecolor="#CC0000" backcolor="#CC0000" uuid="4a4b9610-9302-4bb7-8915-5bff7a08fd6d"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="451" y="0" width="300" height="14" forecolor="#CC0000" backcolor="#CC0000" uuid="f6f7e4cd-fd87-4d03-8b3b-a1f6108d4fc1"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="20" y="40" width="250" height="14" forecolor="#CC0000" backcolor="#CC0000" uuid="180e84b2-b773-449d-8246-41f5f584dde9"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="20" y="54" width="200" height="14" forecolor="#CC0000" backcolor="#CC0000" uuid="f4293d23-11b4-4f90-a12b-7a88debdf1ac"/>
+			</frame>
+			<image scaleImage="FillFrame" isUsingCache="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="20" y="10" width="126" height="44" uuid="cc479f38-e226-44c5-8fd3-3136ccd78c4f"/>
+				<imageExpression><![CDATA["C:\\Users\\Asus\\Documents\\NetBeansProjects\\TonysKinal2019139\\src\\org\\marcosbonifasi\\image\\kinal.png"]]></imageExpression>
+			</image>
+			<image>
+				<reportElement x="698" y="26" width="54" height="51" uuid="fe7ca6a7-a899-417f-ace5-3c11e754c07f"/>
+				<imageExpression><![CDATA["C:\\Users\\Asus\\Documents\\NetBeansProjects\\TonysKinal2019139\\src\\org\\marcosbonifasi\\image\\icono.png"]]></imageExpression>
+			</image>
+			<line>
+				<reportElement x="20" y="77" width="732" height="1" forecolor="#0066CC" backcolor="#0066CC" uuid="3533e1c4-d47c-4e9e-97f3-87e99d8d4fbb"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="32" splitType="Stretch">
+			<staticText>
+				<reportElement x="241" y="3" width="279" height="28" uuid="35ef6752-f9b6-43bd-816b-45330d39738d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="20" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE - SERVICIOS]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="0" width="732" height="1" forecolor="#0066CC" backcolor="#0066CC" uuid="29d6981b-9470-48b6-86f7-c401b0e50e50"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="2" width="149" height="31" uuid="eb7e848c-d3f1-46b0-a12c-67af3c615eec"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad De Platos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="184" y="2" width="267" height="30" uuid="c95d07fa-5790-4fbb-aa86-a0088666f0fa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo De Plato]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="452" y="2" width="299" height="30" uuid="6b3f2e41-55f4-447e-b2d9-857a0e5dc07c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Productos - Plato]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="0" width="732" height="1" forecolor="#0066CC" backcolor="#0066CC" uuid="36ecde81-8ea2-4f4c-97d8-c55e4e8e5882"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="183" y="1" width="1" height="32" forecolor="#0066CC" uuid="87e80b83-3bc8-426b-98e9-73110d998ba7"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="451" y="0" width="1" height="32" forecolor="#0066CC" uuid="f314f153-aa6f-46bb-8dcc-81da052906d3"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="20" y="31" width="732" height="1" forecolor="#0066CC" backcolor="#0066CC" uuid="1240d367-6f38-48fa-96a9-4369bbeaea15"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="90" splitType="Stretch">
+			<textField>
+				<reportElement x="20" y="1" width="164" height="86" uuid="5c0ea8f9-424c-4cc3-93ae-c8d7fbdce907"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12" isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{count(codigoPlato)}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="163" y="3" width="573" height="87" uuid="bed504d7-06ae-4ebb-b7f7-79945ce2bcea"/>
+				<subreportParameter name="codServicio">
+					<subreportParameterExpression><![CDATA[$P{codServicio}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReporteServicios2.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="183" y="0" width="1" height="88" uuid="166f269c-52f8-45f3-ac84-61ea8bb8af22"/>
+			</line>
+			<line>
+				<reportElement x="20" y="88" width="163" height="1" uuid="9abe3dbd-cf13-4bfb-a215-47b2adec4728"/>
+			</line>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="752" height="27" backcolor="#000000" uuid="4420d8af-b7da-4c80-8e8d-1b161afcc4e5"/>
+				<frame>
+					<reportElement mode="Opaque" x="0" y="0" width="20" height="27" forecolor="#CC0000" backcolor="#CC0000" uuid="932901e7-1085-4e7e-b45b-35126d2c4205"/>
+				</frame>
+			</frame>
+			<rectangle radius="10">
+				<reportElement mode="Opaque" x="380" y="5" width="248" height="22" forecolor="#CC0000" backcolor="#CC0000" uuid="f6ee724a-1f66-40e3-bb91-3d5e6e2767ce"/>
+			</rectangle>
+			<frame>
+				<reportElement mode="Opaque" x="616" y="5" width="136" height="22" forecolor="#CC0000" backcolor="#CC0000" uuid="2f1db7c0-6a9e-4c0d-b4a9-372efa2a235d"/>
+			</frame>
+			<staticText>
+				<reportElement mode="Transparent" x="650" y="7" width="100" height="20" forecolor="#FFFFFF" uuid="d2cd47d2-9e1f-4eb4-8445-7352a6de5af5"/>
+				<textElement>
+					<font fontName="Rockwell" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Marcos Bonifasi]]></text>
+			</staticText>
+			<image>
+				<reportElement x="628" y="5" width="22" height="20" uuid="ed2730ba-718f-4b25-b962-d985db361475"/>
+				<imageExpression><![CDATA["C:\\Users\\Asus\\Documents\\NetBeansProjects\\TonysKinal2019139\\src\\org\\marcosbonifasi\\image\\icon-developer.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

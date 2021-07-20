@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marcosbonifasi.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="900.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/TonysKinal.png" />
+         </image>
+      </ImageView>
+      <MenuBar layoutY="-2.0" prefHeight="32.0" prefWidth="900.0" styleClass="barMenuPrincipal">
+        <menus>
+          <Menu mnemonicParsing="false" styleClass="itemMenu" text="Modulos">
+            <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaEmpresa" text="Empresas" />
+              <MenuItem mnemonicParsing="false" onAction="#ventanaTipoEmpleado" text="Tipo Empleado" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTipoPlato" text="Tipo Plato" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProducto" text="Productos" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" styleClass="itemMenu" text="Entidades de Unión">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicio_has_Empleado" text="Servicios_has_Empleados" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaServicio_has_Plato" text="Servicios_has_Platos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProducto_has_Plato" text="Productos_has_Platos" />
+               </items>
+            </Menu>
+          <Menu mnemonicParsing="false" styleClass="itemMenu" text="?">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#ventanaProgramador" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

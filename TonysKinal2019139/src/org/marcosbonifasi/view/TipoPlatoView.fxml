@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="953.0" styleClass="anchorPane" stylesheets="@../resource/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marcosbonifasi.controller.TipoPlatoController">
+   <children>
+      <Label layoutX="344.0" layoutY="25.0" styleClass="titleWindow" text="TIPO PLATO" textFill="#15084d">
+         <effect>
+            <DropShadow color="#f2f2f2" />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="25.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtCodigoTipoPlato" editable="false" layoutX="270.0" layoutY="109.0" prefHeight="31.0" prefWidth="173.0" styleClass="txtField">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Label layoutX="42.0" layoutY="112.0" text="Código Tipo Plato" textFill="#220012">
+         <effect>
+            <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="162.0" text="Descripción" textFill="#220012">
+         <effect>
+            <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDescripcion" editable="false" layoutX="270.0" layoutY="159.0" prefHeight="31.0" prefWidth="391.0" styleClass="txtField">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblTipoPlato" layoutX="42.0" layoutY="223.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="781.0" styleClass="tableView">
+        <columns>
+          <TableColumn fx:id="colCodigoTipoPlato" editable="false" prefWidth="188.0" resizable="false" text="Código Tipo Plato" />
+          <TableColumn fx:id="colDescripcion" editable="false" prefWidth="592.0" resizable="false" text="Descripción" />
+        </columns>
+      </TableView>
+      <Pane layoutX="866.0" layoutY="-1.0" onMouseClicked="#ventanaPlato" prefHeight="274.5" prefWidth="87.0" styleClass="panel">
+         <children>
+            <AnchorPane layoutX="2.0" layoutY="147.0" onMouseClicked="#ventanaPlato">
+               <children>
+                  <ImageView fitHeight="84.0" fitWidth="87.0" layoutY="-42.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/plato.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="16.0" layoutY="20.0" text="Platos">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow height="19.45" radius="10.39" width="24.11" />
+         </effect>
+      </Pane>
+      <Pane layoutX="866.0" layoutY="274.0" onMouseClicked="#menuPrincipal" prefHeight="274.5" prefWidth="87.0" styleClass="panel">
+         <children>
+            <AnchorPane layoutX="17.0" layoutY="93.0">
+               <children>
+                  <Label layoutX="2.0" layoutY="67.0" text="Home">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="55.0" fitWidth="51.0" layoutX="2.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../image/home.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow height="19.45" radius="10.39" width="24.11" />
+         </effect>
+      </Pane>
+      <Button fx:id="btnReporte" layoutX="619.0" layoutY="449.0" mnemonicParsing="false" onAction="#reporte" prefHeight="65.0" prefWidth="150.0" styleClass="btn" text="REPORTE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="420.0" layoutY="449.0" mnemonicParsing="false" onAction="#editar" prefHeight="65.0" prefWidth="179.0" styleClass="btn" text="EDITAR">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="254.0" layoutY="449.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="65.0" prefWidth="150.0" styleClass="btn" text="ELIMINAR">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNuevo" layoutX="83.0" layoutY="449.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="65.0" prefWidth="150.0" styleClass="btn" text="NUEVO">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="16.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+   </children>
+</AnchorPane>

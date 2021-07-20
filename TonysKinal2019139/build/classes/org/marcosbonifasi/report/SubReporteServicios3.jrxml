@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubReporteServicios3" language="groovy" pageWidth="280" pageHeight="612" orientation="Landscape" columnWidth="240" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4e6e3f9f-f137-4e34-b192-47d35659fec0">
+	<property name="ireport.zoom" value="1.771561000000001"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codPlato" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Asus\\Documents\\NetBeansProjects\\TonysKinal2019139\\src\\org\\marcosbonifasi\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_SubReporteListarCodProducto($P{codPlato});]]>
+	</queryString>
+	<field name="codigoProducto" class="java.lang.Integer"/>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="240" height="44" uuid="56f0cde9-2a0a-4001-bf62-a4be74d7b56b"/>
+				<subreportParameter name="codProducto">
+					<subreportParameterExpression><![CDATA[$F{codigoProducto}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReporteServicios4.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

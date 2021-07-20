@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportePresupuesto" language="groovy" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f947df2a-3ed8-4810-9b43-9075d2a8f901">
+	<property name="ireport.zoom" value="1.6105100000000099"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codEmpresa" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Asus\\Documents\\NetBeansProjects\\TonysKinal2019139\\src\\org\\marcosbonifasi\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_ReportePresupuesto($P{codEmpresa});]]>
+	</queryString>
+	<field name="codigoEmpresa" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombreEmpresa" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoServicio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fechaServicio" class="java.sql.Date">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tipoServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="horaServicio" class="java.sql.Time">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="lugarServicio" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoContacto" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="572" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="20" height="572" forecolor="#CC0000" backcolor="#CC0000" uuid="2e026e1e-cb87-489b-b10a-3a6125c36fb8"/>
+			</frame>
+			<line>
+				<reportElement x="751" y="0" width="1" height="572" uuid="4acee3aa-1ea9-40e6-80de-432884dcdb6f"/>
+				<graphicElement>
+					<pen lineWidth="2.0" lineColor="#CC0000"/>
+				</graphicElement>
+			</line>
+			<frame>
+				<reportElement mode="Opaque" x="20" y="0" width="730" height="572" forecolor="#F3F5F3" backcolor="#F3F5F3" uuid="1fd57653-0505-4f1f-a0cd-a78b0bd239a0"/>
+				<image scaleImage="FillFrame">
+					<reportElement x="115" y="208" width="505" height="325" uuid="4342a442-686d-40b4-b3eb-c2e4e7a21963"/>
+					<imageExpression><![CDATA["C:\\Users\\Asus\\Documents\\NetBeansProjects\\TonysKinal2019139\\src\\org\\marcosbonifasi\\image\\KinalFire.png"]]></imageExpression>
+				</image>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="20" y="28" width="400" height="14" forecolor="#CC0000" backcolor="#CC0000" uuid="16252d9d-9704-49eb-b3c3-48f9beff3bf7"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="20" y="42" width="250" height="14" forecolor="#CC0000" backcolor="#CC0000" uuid="6297345e-1dc5-4b78-aa3d-c19305068d2d"/>
+			</frame>
+			<staticText>
+				<reportElement x="530" y="53" width="120" height="22" uuid="fd56b97b-cb72-4aa9-8cd3-06bb2f7a85d9"/>
+				<textElement>
+					<font fontName="Freestyle Script" size="15"/>
+				</textElement>
+				<text><![CDATA[Restaurante de Tipo Buffet]]></text>
+			</staticText>
+			<frame>
+				<reportElement mode="Opaque" x="20" y="14" width="350" height="14" forecolor="#CC0000" backcolor="#CC0000" uuid="6dd1b94f-fa42-41ab-973f-3ece1ed0ab8a"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="20" y="56" width="200" height="14" forecolor="#CC0000" backcolor="#CC0000" uuid="e2036181-8aaf-4049-8cbf-bfa1486a69e2"/>
+			</frame>
+			<staticText>
+				<reportElement x="530" y="29" width="156" height="33" uuid="f227f99d-636d-44dc-964e-e916d5265464"/>
+				<textElement>
+					<font fontName="Gill Sans Ultra Bold" size="20"/>
+				</textElement>
+				<text><![CDATA[Tony's Kinal]]></text>
+			</staticText>
+			<image scaleImage="FillFrame" isUsingCache="true">
+				<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="20" y="15" width="126" height="44" uuid="867fadc0-9af1-4536-8049-ef128ad26955"/>
+				<imageExpression><![CDATA["C:\\Users\\Asus\\Documents\\NetBeansProjects\\TonysKinal2019139\\src\\org\\marcosbonifasi\\image\\kinal.png"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement mode="Opaque" x="452" y="0" width="300" height="14" forecolor="#CC0000" backcolor="#CC0000" uuid="a02c2e54-77d3-4011-8241-0de02340d226"/>
+			</frame>
+			<image>
+				<reportElement x="698" y="28" width="54" height="51" uuid="cf55f470-4633-4484-834a-6744f2bf61c7"/>
+				<imageExpression><![CDATA["C:\\Users\\Asus\\Documents\\NetBeansProjects\\TonysKinal2019139\\src\\org\\marcosbonifasi\\image\\icono.png"]]></imageExpression>
+			</image>
+			<frame>
+				<reportElement mode="Opaque" x="20" y="0" width="300" height="15" forecolor="#CC0000" backcolor="#CC0000" uuid="218163bb-1e56-44df-bda4-a265a4c25d73"/>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<staticText>
+				<reportElement x="235" y="3" width="279" height="28" uuid="111da0f5-ab8e-404f-97d2-050d0155ba9e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="20" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[REPORTE - PRESUPUESTO]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="0" width="732" height="1" forecolor="#0066CC" backcolor="#0066CC" uuid="e721d5a1-c487-46f7-9288-059b42d02688"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="94" splitType="Stretch">
+			<line>
+				<reportElement x="20" y="0" width="732" height="1" forecolor="#0066CC" backcolor="#0066CC" uuid="22ab56be-7582-484f-9231-a199ba3b1952"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="24" y="40" width="136" height="20" uuid="91a06706-fefa-4e94-998c-d6f8bee5052c"/>
+				<textElement>
+					<font fontName="Rockwell" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dirección Empresa:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="69" width="115" height="25" uuid="fbb5bc75-c5b7-4345-b2c2-eaf8c8a3631c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha Solicitud]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="136" y="69" width="197" height="25" uuid="f2be94bc-438d-4422-aa92-b933569d6a83"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cantidad de Presupuesto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="334" y="69" width="138" height="25" uuid="c35b774e-ae36-4632-96f2-cc1c29dd6d79"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipo de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="473" y="69" width="130" height="25" uuid="9ef5aa13-7ec8-4c74-aeae-83767b8f2b30"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hora de Servicio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="603" y="69" width="149" height="25" uuid="84931c11-c04c-4712-9c42-2007c99a6ead"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Rockwell" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Lugar de Servicio]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="68" width="732" height="1" forecolor="#0066CC" backcolor="#0066CC" uuid="e20dc49b-40d1-48a1-b5e9-0133c5a7cb5c"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="135" y="69" width="1" height="25" forecolor="#0066CC" uuid="e4099fe7-f661-4041-ab05-f64e99c05f52"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="333" y="68" width="1" height="26" forecolor="#0066CC" uuid="266e02e3-b609-4bab-a009-5abe43b3afd0"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="472" y="68" width="1" height="26" forecolor="#0066CC" uuid="1de3f916-5e8e-4d29-99ee-442c6ce5efb8"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="602" y="69" width="1" height="25" forecolor="#0066CC" uuid="57aaf4fc-053b-40ec-88da-2c2ff58550e6"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="24" y="10" width="122" height="20" uuid="4eb902a8-f7b0-4206-be29-d283b32964d8"/>
+				<textElement>
+					<font fontName="Rockwell" size="13" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nombre Empresa:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="93" width="732" height="1" forecolor="#0066CC" backcolor="#0066CC" uuid="0b15b90c-dc34-4f67-8d54-8b1678c591fd"/>
+				<graphicElement>
+					<pen lineWidth="2.0"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="170" y="10" width="580" height="20" uuid="758e5bce-61df-4931-b29d-f648208bffd1"/>
+				<textElement verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombreEmpresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="170" y="40" width="580" height="20" uuid="0aad1af7-b2f5-428e-a4e4-1dab61e3b4d7"/>
+				<textElement verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="384" y="1" width="100" height="20" uuid="9679b4cb-b324-4b9c-b0d1-e4540aae12bd"/>
+				<text><![CDATA[tipoServicio]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="49" splitType="Stretch">
+			<line>
+				<reportElement x="135" y="0" width="1" height="49" forecolor="#0066CC" uuid="49cb395d-8090-41ab-bc96-8f8d629c68b8"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="333" y="0" width="1" height="49" forecolor="#0066CC" uuid="822140f1-4bd3-47b5-83f7-06aaa8017b60"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="602" y="0" width="1" height="49" forecolor="#0066CC" uuid="59a9bc02-3e2c-4144-9416-5dd5f989952e"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="20" y="48" width="732" height="1" forecolor="#0066CC" backcolor="#0066CC" uuid="055523cd-4040-4ee6-bc63-ac177e56c502"/>
+				<graphicElement>
+					<pen lineWidth="1.5"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="472" y="0" width="1" height="49" forecolor="#0066CC" uuid="6ba2a0e0-b376-4075-84fd-cd2f31ed4667"/>
+				<graphicElement>
+					<pen lineWidth="1.5" lineStyle="Dashed"/>
+				</graphicElement>
+			</line>
+			<textField>
+				<reportElement x="24" y="0" width="111" height="48" uuid="30c1e750-8f2e-498a-8a40-d507e956a46a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{fechaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="473" y="0" width="129" height="48" uuid="ffe7e648-97a0-4d75-b4d6-e9c520c08ca8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{horaServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="603" y="0" width="149" height="48" uuid="be8e3926-c422-478d-9275-b27e999efd95"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{lugarServicio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="334" y="0" width="138" height="48" uuid="1b048006-acb3-486b-ba0d-2e499e2b7696"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isItalic="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipoServicio}]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="136" y="1" width="198" height="48" uuid="73516413-34fc-40a6-af85-679fcfafd0c9"/>
+				<subreportParameter name="codEmpresa">
+					<subreportParameterExpression><![CDATA[$P{codEmpresa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReportePresupuesto.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="27" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="752" height="27" backcolor="#000000" uuid="48a5301d-bce4-4dda-a6d4-6ba048f0e48f"/>
+			</frame>
+			<rectangle radius="10">
+				<reportElement mode="Opaque" x="381" y="5" width="248" height="22" forecolor="#CC0000" backcolor="#CC0000" uuid="3c8f802f-53ae-4bdb-86a4-d61c600bdba4"/>
+			</rectangle>
+			<frame>
+				<reportElement mode="Opaque" x="616" y="5" width="136" height="22" forecolor="#CC0000" backcolor="#CC0000" uuid="aa01e026-617c-4d49-89d8-e8b39c2bdfc9"/>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="20" height="27" forecolor="#CC0000" backcolor="#CC0000" uuid="ff03a8cf-e5ab-47fd-9fd5-635466b4a372"/>
+			</frame>
+			<staticText>
+				<reportElement mode="Transparent" x="650" y="7" width="100" height="20" forecolor="#FFFFFF" uuid="c0c1e581-7acf-4cde-9b8e-7c7b83ced69e"/>
+				<textElement>
+					<font fontName="Rockwell" size="12" isBold="true" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Marcos Bonifasi]]></text>
+			</staticText>
+			<image>
+				<reportElement x="623" y="5" width="22" height="20" uuid="f823af94-820a-4d15-b2ac-8da6dc034b0b"/>
+				<imageExpression><![CDATA["C:\\Users\\Asus\\Documents\\NetBeansProjects\\TonysKinal2019139\\src\\org\\marcosbonifasi\\image\\icon-developer.png"]]></imageExpression>
+			</image>
+		</band>
+	</pageFooter>
+</jasperReport>

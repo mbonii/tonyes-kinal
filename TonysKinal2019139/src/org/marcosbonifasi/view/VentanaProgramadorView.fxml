@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="anchorPaneDeveloper" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="787.0" styleClass="anchorPane" stylesheets="@../resource/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marcosbonifasi.controller.DatosPersonalesController">
+   <children>
+      <Button id="btnDeveloper" fx:id="btnDesarrollador" layoutX="54.0" layoutY="160.0" mnemonicParsing="false" onAction="#desarrollador" prefHeight="37.0" prefWidth="300.0" styleClass="btn" text="DESARROLLADOR">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button id="btnDeveloper" fx:id="btnAdministracion" layoutX="445.0" layoutY="255.0" mnemonicParsing="false" onAction="#administracion" prefHeight="57.0" prefWidth="300.0" styleClass="btn" text="ADMINISTRACIÓN">
+         <effect>
+            <InnerShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="19.0" />
+         </font>
+      </Button>
+      <Group layoutX="7.0" layoutY="7.0" onMouseClicked="#menuPrincipal">
+         <children>
+            <Label id="txtTonysKinal" layoutX="289.0" layoutY="41.0" styleClass="txt" text="Tony´s Kinal">
+               <effect>
+                  <SepiaTone />
+               </effect>
+               <font>
+                  <Font name="Bell MT" size="15.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="167.0" layoutY="7.0" prefHeight="137.0" prefWidth="439.0" />
+            <ImageView fitHeight="111.0" fitWidth="118.0" layoutX="178.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/icono.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Group>
+      <AnchorPane fx:id="anchorPaneDesarrollador" layoutX="79.0" layoutY="247.0" prefHeight="250.0" prefWidth="250.0" visible="false">
+         <children>
+            <ImageView id="imgDeveloper" fitHeight="174.0" fitWidth="183.0" layoutX="34.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/developer.jpg" />
+               </image>
+            </ImageView>
+            <Label layoutX="86.0" layoutY="186.0" styleClass="txt" text="2019139" />
+            <Label layoutX="6.0" layoutY="155.0" styleClass="txt" text="Bonifasi de León, Marcos Daniel" />
+            <Label layoutX="92.0" layoutY="213.0" styleClass="txt" text="IN5AM" />
+         </children>
+      </AnchorPane>
+      <ImageView fx:id="imgKinal" fitHeight="121.0" fitWidth="264.0" layoutX="463.0" layoutY="364.0" pickOnBounds="true" preserveRatio="true" visible="false">
+         <image>
+            <Image url="@../image/kinal.png" />
+         </image>
+      </ImageView>
+   </children>
+   <effect>
+      <DropShadow />
+   </effect>
+</AnchorPane>

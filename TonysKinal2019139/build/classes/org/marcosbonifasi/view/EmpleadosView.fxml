@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="658.0" prefWidth="1093.0" styleClass="anchorPane" stylesheets="@../resource/styles.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.marcosbonifasi.controller.EmpleadoController">
+   <children>
+      <Label layoutX="384.0" layoutY="29.0" styleClass="titleWindow" text="EMPLEADOS" textFill="#15084d">
+         <effect>
+            <DropShadow color="#f2f2f2" />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblEmpleados" layoutX="36.0" layoutY="329.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="200.0" prefWidth="929.0" styleClass="tableView">
+        <columns>
+          <TableColumn fx:id="colCodigoEmpleado" editable="false" prefWidth="94.0" resizable="false" text="Código  E." />
+          <TableColumn fx:id="colNumeroEmpleado" editable="false" prefWidth="123.0" resizable="false" text="Número E." />
+            <TableColumn fx:id="colApellidosEmpleado" editable="false" prefWidth="121.0" resizable="false" text="Apellidos E." />
+            <TableColumn fx:id="colNombresEmpleado" editable="false" prefWidth="111.0" resizable="false" text="Nombres E." />
+            <TableColumn fx:id="colDireccionEmpleado" editable="false" prefWidth="120.0" resizable="false" text="Dirección E." />
+            <TableColumn fx:id="colTelefonoContacto" editable="false" prefWidth="116.0" resizable="false" text="Teléfono C." />
+            <TableColumn fx:id="colGradoCocinero" editable="false" prefWidth="121.0" resizable="false" text="Grado Coc." />
+            <TableColumn fx:id="colCodigoTipoEmpleado" editable="false" prefWidth="122.0" resizable="false" text="Código T. E." />
+        </columns>
+      </TableView>
+      <Group layoutX="229.0" layoutY="-18.0" />
+      <GridPane layoutX="45.0" layoutY="91.0" prefHeight="205.0" prefWidth="911.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="130.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Nombres Empleado" textFill="#220012" GridPane.rowIndex="3">
+               <effect>
+                  <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+               </effect>
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombresEmpleado" editable="false" prefHeight="31.0" prefWidth="210.0" styleClass="txtField" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <Label text="Apellidos Empleado" textFill="#220012" GridPane.rowIndex="2">
+               <effect>
+                  <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+               </effect>
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtApellidosEmpleado" editable="false" prefHeight="31.0" prefWidth="210.0" styleClass="txtField" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <Label text="Número Empleado" textFill="#220012" GridPane.rowIndex="1">
+               <effect>
+                  <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+               </effect>
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNumeroEmpleado" editable="false" prefHeight="31.0" prefWidth="210.0" styleClass="txtField" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <Label text="Código Empleado" textFill="#220012">
+               <effect>
+                  <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+               </effect>
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtCodigoEmpleado" editable="false" prefHeight="31.0" prefWidth="173.0" styleClass="txtField" GridPane.columnIndex="1">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <Label text="Código Tipo Empleado" textFill="#220012" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <effect>
+                  <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+               </effect>
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="17.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="8.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <ComboBox fx:id="cmbCodigoTipoEmpleado" prefHeight="31.0" prefWidth="210.0" promptText="Seleccione uno" styleClass="cmb" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <InnerShadow />
+                     </input>
+                  </DropShadow>
+               </effect>
+            </ComboBox>
+            <Label text="Grado Cocinero" textFill="#220012" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <effect>
+                  <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+               </effect>
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="8.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtGradoCocinero" editable="false" prefHeight="31.0" prefWidth="210.0" styleClass="txtField" GridPane.columnIndex="3" GridPane.rowIndex="2">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <Label text="Dirección Empleado" textFill="#220012" GridPane.columnIndex="2">
+               <effect>
+                  <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+               </effect>
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="8.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtDireccionEmpleado" editable="false" prefHeight="31.0" prefWidth="210.0" styleClass="txtField" GridPane.columnIndex="3">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+            <Label text="Teléfono Contacto" textFill="#220012" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <effect>
+                  <DropShadow color="#c6aaaa" height="11.67" radius="5.335" spread="0.65" width="11.67" />
+               </effect>
+               <font>
+                  <Font name="Gill Sans Ultra Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="1.0" left="8.0" right="1.0" top="1.0" />
+               </padding>
+            </Label>
+            <TextField fx:id="txtTelefonoContacto" editable="false" prefHeight="31.0" prefWidth="210.0" promptText="NNNN-NNNN" styleClass="txtField" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </TextField>
+         </children>
+      </GridPane>
+      <Pane layoutX="1006.0" onMouseClicked="#tipoEmpleado" prefHeight="329.0" prefWidth="87.0" styleClass="panel">
+         <children>
+            <AnchorPane layoutX="15.0" layoutY="120.0" onMouseClicked="#tipoEmpleado">
+               <children>
+                  <ImageView fitHeight="72.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/volver.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="2.0" layoutY="67.0" text="Volver">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow height="19.45" radius="10.39" width="24.11" />
+         </effect>
+      </Pane>
+      <Pane layoutX="1006.0" layoutY="329.0" onMouseClicked="#menuPrincipal" prefHeight="329.0" prefWidth="87.0" styleClass="panel">
+         <children>
+            <AnchorPane layoutX="18.0" layoutY="99.0" onMouseClicked="#menuPrincipal">
+               <children>
+                  <Label layoutY="62.0" text="Home">
+                     <font>
+                        <Font name="Berlin Sans FB" size="20.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="55.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <effect>
+                        <InnerShadow />
+                     </effect>
+                     <image>
+                        <Image url="@../image/home.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+         <effect>
+            <DropShadow height="19.45" radius="10.39" width="24.11" />
+         </effect>
+      </Pane>
+      <Button fx:id="btnReporte" layoutX="683.0" layoutY="558.0" mnemonicParsing="false" onAction="#reporte" prefHeight="65.0" prefWidth="150.0" styleClass="btn" text="REPORTE">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="484.0" layoutY="558.0" mnemonicParsing="false" onAction="#editar" prefHeight="65.0" prefWidth="179.0" styleClass="btn" text="EDITAR">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="318.0" layoutY="558.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="65.0" prefWidth="150.0" styleClass="btn" text="ELIMINAR">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnNuevo" layoutX="147.0" layoutY="558.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="65.0" prefWidth="150.0" styleClass="btn" text="NUEVO">
+         <effect>
+            <DropShadow />
+         </effect>
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="16.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="BLACK" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+   </children>
+</AnchorPane>

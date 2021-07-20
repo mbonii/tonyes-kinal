@@ -1,0 +1,161 @@
+/*
+    Estilos
+        Bonifasi de León, Marcos Daniel
+        2019-139
+        IN5AM
+*/
+
+/*Utilidades*/
+.btn{
+    -fx-background-color: #228d0c;
+    -fx-padding: 20px;
+    -fx-text-fill: white;
+    -fx-background-radius: 20px;
+}
+.btn:hover{
+    -fx-background-color: #166106;
+}
+.txt{
+    -fx-font-family: "sans-serif";
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: 900;
+}
+
+.anchorPane{
+    -fx-background-color: #870623;
+    -fx-border-color: #000000;
+    -fx-background-color: linear-gradient(to bottom right, #920909, #f91515 100%);
+}
+.titleWindow{
+    -fx-underline: true;
+}
+.tableView{ 
+    -fx-padding: 0.2em;
+    -fx-border-color: -fx-box-border -fx-box-border transparent transparent;  
+    -fx-font: 1em "Segoe UI";    
+    -fx-border-insets: 0;
+}
+.tableView:hover{
+    -fx-background-color: #0599c5;
+}
+
+#txtTonysKinal{
+    -fx-font-size: 50px;
+
+}
+.txtField{
+    -fx-padding: 0.2em 0.5em 0.2em 0.5em;
+    -fx-background-color: #f3f5f3;
+    -fx-border-color: #f3f5f3;
+}
+.txtField:hover{
+    -fx-border-color: #000000;
+}
+
+.barMenuPrincipal:hover {
+    -fx-background-color: #000000;
+}
+
+/*Desarrollador*/
+#anchorPaneDeveloper{
+    -fx-border-color: #000000;
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #508eed, #066159);
+}
+.imgDeveloper{
+    -fx-border-color: black;
+}
+#btnDeveloper{
+    -fx-background-color: #505eed;
+    -fx-background-radius: 500px;
+    -fx-text-transform: uppercase;
+}
+#btnDeveloper:hover{
+    -fx-background-color: #0e59a9;
+    -fx-text-transform: uppercase;
+}
+#btnDeveloper:target {
+    -fx-display: none;
+}
+
+.cmb{
+    -fx-font-weight: 700;
+    -fx-background-color: #0599c5;
+}
+.cmb:hover{
+    -fx-background-color: #35b0d5;
+    
+}
+
+.panel {
+    -fx-background-color: #bc33a9;
+}
+
+.panel:hover {
+    -fx-background-color: #a42d93;
+}
+
+/*Estilos para TableView*/
+.table-cell {     
+    -fx-padding: 0.5em 0.5em 0.1em 0.3em;
+    -fx-border-color: -fx-box-border -fx-box-border transparent transparent;  
+    -fx-font: 13px "Segoe UI";    
+    -fx-border-insets: 0;
+}
+
+.table-cell:hover {
+    -fx-background-color: #bedee0;
+}
+ 
+.table-row-cell:empty, .table-cell:empty:hover {
+    -fx-background-color: whitesmoke;
+}
+ 
+
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0px;
+}
+
+.table-view:row-selection .table-row-cell:filled:hover { 
+    -fx-background-color: #ece3e5;
+}
+
+.table-view:row-selection .table-row-cell:filled:selected:hover { 
+    -fx-background-color: rgba(228, 183, 236, 0.90);
+}
+
+.table-view:row-selection .table-row-cell:filled:selected { 
+    -fx-background-color: rgba(28, 183, 236, 0.65);
+}
+
+.table-view, .table-view:focused {
+  -fx-background-color: transparent,-fx-box-border,-fx-control-inner-background;
+  -fx-background-insets: -1.4, 0, 1;
+  -fx-background-radius: 1.4, 0, 0;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: #52677A;
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header:hover {
+    -fx-background-color: #ece3e5;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: white;    
+    -fx-size: 45;
+    -fx-border-color: -fx-box-border;
+    -fx-border-width: 0 1 3 0;
+    -fx-border-insets: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .show-hide-columns-button {
+    -fx-background-color: white;
+    -fx-border-color: -fx-box-border;
+    -fx-border-insets: 0;
+}

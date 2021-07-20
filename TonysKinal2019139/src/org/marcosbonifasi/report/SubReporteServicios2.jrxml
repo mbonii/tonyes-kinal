@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SubReporteServicios2" language="groovy" pageWidth="610" pageHeight="612" orientation="Landscape" columnWidth="570" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="68226867-69ed-40ce-866e-0a0c05e78cab">
+	<property name="ireport.zoom" value="1.6105100000000019"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="codServicio" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Asus\\Documents\\NetBeansProjects\\TonysKinal2019139\\src\\org\\marcosbonifasi\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[call sp_SubReporteListarCodPlatos($P{codServicio});]]>
+	</queryString>
+	<field name="codigoPlato" class="java.lang.Integer"/>
+	<detail>
+		<band height="45" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="264" height="44" uuid="d5e5132a-80bd-4074-a599-a960a39fdcc7"/>
+				<subreportParameter name="codPlato">
+					<subreportParameterExpression><![CDATA[$F{codigoPlato}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReporteServicios1.jasper"]]></subreportExpression>
+			</subreport>
+			<subreport>
+				<reportElement x="264" y="0" width="305" height="44" uuid="73a9aff6-0ea5-4c68-8f30-432f82915715"/>
+				<subreportParameter name="codPlato">
+					<subreportParameterExpression><![CDATA[$F{codigoPlato}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="SUBREPORT_DIR"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "SubReporteServicios3.jasper"]]></subreportExpression>
+			</subreport>
+			<line>
+				<reportElement x="0" y="0" width="570" height="1" uuid="36b72c20-c25f-48fe-af77-166dd59d2ec4"/>
+			</line>
+		</band>
+	</detail>
+</jasperReport>
